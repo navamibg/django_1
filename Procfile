@@ -1,1 +1,1 @@
-web: python manage.py runserver  --log-file -
+worker: python manage.py runserver  --log-file -
