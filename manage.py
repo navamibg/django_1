@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 import os
 import sys
+import process
 
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "weatherapp.settings")
     try:
-        from django.core.management.commands.runserver import Command as runserver
-        runserver.default_port = process.env.PORT || '5000'
         from django.core.management import execute_from_command_line
     except ImportError:
         # The above import may fail for some other reason. Ensure that the
